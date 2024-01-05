@@ -1,0 +1,177 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="1dp">
+
+        <TextView
+            android:id="@+id/progressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/100 "
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="50"
+            app:layout_constraintStart_toEndOf="@+id/progressText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/progressText"
+            app:layout_constraintBottom_toBottomOf="@+id/progressText" />
+
+        <Spinner
+            android:id="@+id/spinner_languages"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp" />
+
+        <Spinner
+            android:id="@+id/spinner_speed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="32dp"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_languages"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="2dp" />
+
+        <TextView
+            android:id="@+id/textViewSentence"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:textIsSelectable="true"
+            android:hint="@string/sentence_hint"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_speed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="2dp" />
+
+        <TextView
+            android:id="@+id/textViewEnglishTranslation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSentence"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="2dp" />
+
+        <TextView
+            android:id="@+id/textViewLatinTranscription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewEnglishTranslation"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="2dp" />
+
+        <EditText
+            android:id="@+id/editTextAnswer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/answer_hint"
+            android:minHeight="48dp"
+            app:layout_constraintTop_toBottomOf="@+id/textViewLatinTranscription"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="2dp" />
+
+        <Button
+            android:id="@+id/buttonSubmitAnswer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check Answer"
+            app:layout_constraintTop_toBottomOf="@+id/editTextAnswer"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="1dp" />
+
+        <Button
+            android:id="@+id/buttonGetSentence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/get_sentence_button"
+            app:layout_constraintTop_toBottomOf="@+id/buttonSubmitAnswer"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="1dp" />
+
+                <Button
+            android:id="@+id/buttonGetTranslation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get Translation"
+            app:layout_constraintTop_toBottomOf="@+id/buttonGetSentence"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="1dp" />
+
+        <Button
+            android:id="@+id/buttonGetExplanation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Explain Sentence"
+            app:layout_constraintTop_toBottomOf="@+id/buttonGetTranslation"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="1dp" />
+
+        <Button
+            android:id="@+id/chatButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chat with AI Tutor"
+            app:layout_constraintTop_toBottomOf="@+id/buttonGetExplanation"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="1dp" />
+
+        <Button
+            android:id="@+id/buttonShowGuide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="How to use the app"
+            app:layout_constraintTop_toBottomOf="@+id/chatButton"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="1dp" />
+
+        <EditText
+            android:id="@+id/editAIresponse"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter Question for AI"
+            android:minHeight="48dp"
+            app:layout_constraintTop_toBottomOf="@+id/buttonShowGuide"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="1dp" />
+
+        <TextView
+            android:id="@+id/response_textview"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:hint="Click Explain Sentence to:\n1) Answer your question\n2) Get an AI grammar and vocabulary explanation of the sentence"
+            android:textSize="20sp"
+            app:layout_constraintTop_toBottomOf="@+id/editAIresponse"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="1dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

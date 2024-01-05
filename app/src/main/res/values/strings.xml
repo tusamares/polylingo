@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">polylingo</string>
+    <string name="select_native_language_prompt">Select native language</string>
+    <string name="select_target_language_prompt">Select target language</string>
+    <string name="start_learning_button_text">Start Learning</string>
+    <string name="no_sentence_yet">No sentence yet</string>
+    <string name="get_random_sentence">Get Random Sentence</string>
+    <string name="get_sentence_button">Next Sentence</string>
+    <string name="sentence_hint">Sentence hint</string>
+    <string name="no_sentence_found">No sentence found</string>
+    <string name="failed_to_fetch_sentence">Failed to fetch sentence</string>
+    <string name="submit_button">Submit</string>
+    <string name="answer_hint">Enter your answer here</string>
+    <string name="get_explanation_button">Get Explanation</string>
+    <string name="get_translation_button">Get Translation</string>
+    <string name="chat_gpt_api_key">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</string>
+    <string name="How_to_use_the_app_button">How to use the app</string>
+    <string name="dialog_guide_message">
+    <![CDATA[
+        <b>Selecting a Language:</b><br/>
+        When you launch the app, you will see a language selection dropdown list. Tap on the list to expand the available languages and select your desired language. The default language is set to "Cantonese."<br/><br/>
+
+        <b>Fetching a Sentence:</b><br/>
+        Once you have selected a language, you can fetch a random sentence to practice. Tap the "Get Sentence" button, and a sentence will be displayed on the screen with one word missing.<br/><br/>
+
+        <b>Translating the Missing Word:</b><br/>
+        To translate the missing word, tap the "Get Translation" button. The app will translate the missing word and display the translation below the sentence.<br/><br/>
+
+        <b>Providing an Explanation:</b><br/>
+        If you want to receive an explanation of the grammar and translation of the sentence, tap the "Explain Sentence" button. The app will use an AI-powered chat feature to generate a response to your explanation.<br/><br/>
+
+        <b>Answering the Missing Word:</b><br/>
+        Once you have the translation and explanation, you can try to answer the missing word. Type your answer in the provided text field and tap the "Submit Answer" button. The app will compare your answer with the correct answer and display a message indicating whether your answer is correct or incorrect.<br/><br/>
+
+        <b>Fetching Another Sentence:</b><br/>
+        If you want to fetch another sentence to practice, tap the "Get Sentence" button again. The app will retrieve a new sentence with a missing word.
+    ]]>
+</string>
+
+    <string-array name="languages">
+        <item>Cantonese</item>
+        <item>Mandarin</item>
+        <item>Dutch</item>
+        <item>Spanish</item>
+        <item>French</item>
+        <item>Russian</item>
+        <item>Greek</item>
+        <item>English from Spanish</item>
+        <!-- add more languages as needed -->
+    </string-array>
+    <string name="title_activity_chat2">ChatActivity2</string>
+    <string-array name="tts_speed_options">
+        <item>Fast</item>
+        <item>Medium</item>
+        <item>Slow</item>
+        <item>Do not read aloud</item>
+    </string-array>
+
+</resources>
